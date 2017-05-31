@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="VersionName">1.0</string>
+    <string name="ApplicationName">FruitsAndVeggies</string>
+    <string name="fruits_text">Fruits</string>
+    <string name="veggies_text">Veggies</string>
+</resources>

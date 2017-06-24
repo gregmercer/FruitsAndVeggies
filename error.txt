@@ -1,8 +1,9 @@
-/Users/macgmercer/Projects/FruitsAndVeggies/packages/Xamarin.Build.Download.0.4.2/build/Xamarin.Build.Download.targets(3,3): Error: Could not find a part of the path "/Users/macgmercer/Projects/FruitsAndVeggies/FruitsAndVeggies.Droid/androidsupport-25.1.1/supportcompat/support-compat-25.1.1.aar".
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0015e] in /private/tmp/source-mono-2017-02/bockbuild-2017-02/profiles/mono-mac-xamarin/build-root/mono-x86/mcs/class/corlib/System.IO/FileStream.cs:223 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share) [0x00000] in /private/tmp/source-mono-2017-02/bockbuild-2017-02/profiles/mono-mac-xamarin/build-root/mono-x86/mcs/class/corlib/System.IO/FileStream.cs:91 
-  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)
-  at System.IO.File.OpenRead (System.String path) [0x00000] in /private/tmp/source-mono-2017-02/bockbuild-2017-02/profiles/mono-mac-xamarin/build-root/mono-x86/mcs/class/corlib/System.IO/File.cs:350 
-  at Xamarin.Build.Download.BaseXamarinBuildResourceRestore.LoadResource (System.String resourceFullPath, System.String assemblyName) [0x00000] in <69830c09c0024c60b0a1e4281a6f8a0b>:0 
-  at Xamarin.Build.Download.XamarinBuildAndroidAarRestore.LoadResource (System.String resourceFullPath, System.String assemblyName) [0x00006] in <69830c09c0024c60b0a1e4281a6f8a0b>:0 
-  at Xamarin.Build.Download.BaseXamarinBuildResourceRestore.MergeResources (Mono.Cecil.IAssemblyResolver resolver, System.String originalAsmPath, System.String mergedAsmPath, System.String assemblyName, System.Collections.Generic.List`1[T] resourceItems) [0x00083] in <69830c09c0024c60b0a1e4281a6f8a0b>:0  (FruitsAndVeggies.Droid)
+Could not resolve type with token 01000037 
+(from typeref, class/assembly MvvmCross.Core.ViewModels.MvxRequestedBy, MvvmCross.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null)
+
+  at MvvmCross.Core.ViewModels.MvxCommand`1[T].Execute (System.Object parameter) [0x00009] in C:\vcs\git\MvvmCross\MvvmCross\Core\Core\ViewModels\MvxCommand.cs:222 
+  at MvvmCross.Binding.Droid.Views.MvxListView.ExecuteCommandOnItem (System.Windows.Input.ICommand command, System.Int32 position) [0x0001f] in C:\vcs\git\MvvmCross\MvvmCross\Binding\Droid\Views\MvxListView.cs:141 
+  at MvvmCross.Binding.Droid.Views.MvxListView.OnItemClick (System.Object sender, Android.Widget.AdapterView+ItemClickEventArgs e) [0x00000] in C:\vcs\git\MvvmCross\MvvmCross\Binding\Droid\Views\MvxListView.cs:146 
+  at Android.Widget.AdapterView+IOnItemClickListenerImplementor.OnItemClick (Android.Widget.AdapterView parent, Android.Views.View view, System.Int32 position, System.Int64 id) [0x0001b] in <d855bac285f44dda8a0d8510b679b1e2>:0 
+  at Android.Widget.AdapterView+IOnItemClickListenerInvoker.n_OnItemClick_Landroid_widget_AdapterView_Landroid_view_View_IJ (System.IntPtr jnienv, System.IntPtr native__this, System.IntPtr native_parent, System.IntPtr native_view, System.Int32 position, System.Int64 id) [0x00017] in <d855bac285f44dda8a0d8510b679b1e2>:0 
+  at (wrapper dynamic-method) System.Object:d6911067-7013-425c-8033-3a0b53ac9182 (intptr,intptr,intptr,intptr,int,long)

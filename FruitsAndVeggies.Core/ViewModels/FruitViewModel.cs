@@ -34,5 +34,17 @@ namespace FruitsAndVeggies.Core.ViewModels
 				RaisePropertyChanged();
 			}
 		}
+
+        private FruitsViewModel _parent;
+		public FruitsViewModel Parent
+		{
+			get { return _parent; }
+			set
+			{
+				if (Parent == value) return;
+				_parent = value;
+				RaisePropertyChanged();
+			}
+		}
     }
 }

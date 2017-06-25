@@ -24,16 +24,19 @@ namespace FruitsAndVeggies.Core.ViewModels
 
 			var fruitViewModel = new FruitViewModel();
 			fruitViewModel.Name = "Apple";
+            fruitViewModel.Parent = this;
 			fruitViewModel.Init(fruitViewModel);
 			Fruits.Add(fruitViewModel);
 
 			fruitViewModel = new FruitViewModel();
-			fruitViewModel.Name = "Bannana";
+			fruitViewModel.Name = "Banana";
+            fruitViewModel.Parent = this;
 			fruitViewModel.Init(fruitViewModel);
 			Fruits.Add(fruitViewModel);
 
 			fruitViewModel = new FruitViewModel();
 			fruitViewModel.Name = "Pear";
+            fruitViewModel.Parent = this;
 			fruitViewModel.Init(fruitViewModel);
 			Fruits.Add(fruitViewModel);
         }
@@ -46,13 +49,13 @@ namespace FruitsAndVeggies.Core.ViewModels
 				{
 					Debug.WriteLine($"In ShowDetailCommand");
 					FruitsViewModel.Parameters parameters = new FruitsViewModel.Parameters();
-					foreach(var fruit in Fruits) {
+                    foreach(var fruit in item.Parent.Fruits) {
 					    parameters.fruitIds += "," + fruit.Name;
 					}
 					parameters.fruitIds = parameters.fruitIds.Remove(0, 1);
 					parameters.fruitsCount = Fruits.Count.ToString();
 					parameters.fruitId = item.Name;
-					ShowViewModel<FruitPagerViewModel>(parameters);
+					//ShowViewModel<FruitPagerViewModel>(parameters);
 				});
 			}
 		}

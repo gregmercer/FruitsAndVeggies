@@ -6,4 +6,4 @@ Could not resolve type with token 01000037
   at MvvmCross.Binding.Droid.Views.MvxListView.OnItemClick (System.Object sender, Android.Widget.AdapterView+ItemClickEventArgs e) [0x00000] in C:\vcs\git\MvvmCross\MvvmCross\Binding\Droid\Views\MvxListView.cs:146 
   at Android.Widget.AdapterView+IOnItemClickListenerImplementor.OnItemClick (Android.Widget.AdapterView parent, Android.Views.View view, System.Int32 position, System.Int64 id) [0x0001b] in <d855bac285f44dda8a0d8510b679b1e2>:0 
   at Android.Widget.AdapterView+IOnItemClickListenerInvoker.n_OnItemClick_Landroid_widget_AdapterView_Landroid_view_View_IJ (System.IntPtr jnienv, System.IntPtr native__this, System.IntPtr native_parent, System.IntPtr native_view, System.Int32 position, System.Int64 id) [0x00017] in <d855bac285f44dda8a0d8510b679b1e2>:0 
-  at (wrapper dynamic-method) System.Object:d6911067-7013-425c-8033-3a0b53ac9182 (intptr,intptr,intptr,intptr,int,long)
+  at (wrapper dynamic-method) System.Object:7e70dda6-cc11-4d35-bf1c-1b7f162da3d9 (intptr,intptr,intptr,intptr,int,long)

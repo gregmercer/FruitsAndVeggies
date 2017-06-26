@@ -186,6 +186,8 @@
     <Compile Include="Views\FruitPagerView.cs" />
     <Compile Include="Adapters\FruitPagerViewFragmentAdapter.cs" />
     <Compile Include="Fragments\FruitFragment.cs" />
+    <Compile Include="Views\VeggiePagerView.cs" />
+    <Compile Include="Adapters\VeggiePagerViewFragmentAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\AboutAssets.txt" />

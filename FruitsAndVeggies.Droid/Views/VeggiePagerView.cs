@@ -19,9 +19,9 @@ using System.Linq;
 
 namespace FruitsAndVeggies.Droid.Views
 {
-	[Activity(Label = "FruitPagerView", Theme = "@style/Theme.Light.NoActionBar",
+	[Activity(Label = "VeggiePagerView", Theme = "@style/Theme.Light.NoActionBar",
 		ScreenOrientation = ScreenOrientation.Portrait)]
-	public class FruitPagerView : MvxAppCompatActivity<FruitPagerViewModel>
+	public class VeggiePagerView : MvxAppCompatActivity<VeggiePagerViewModel>
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -30,9 +30,9 @@ namespace FruitsAndVeggies.Droid.Views
 
 		protected override void OnViewModelSet()
 		{
-			Title = "Fruit Detail";
+			Title = "Veggie Detail";
 
-			SetContentView(Resource.Layout.FruitPagerActivity);
+			SetContentView(Resource.Layout.VeggiePagerActivity);
 			base.OnViewModelSet();
 
 			// Get toolbar and set title.
@@ -41,7 +41,7 @@ namespace FruitsAndVeggies.Droid.Views
 
 			// Configure tab layout.
 			var viewPager = FindViewById<ViewPager>(Resource.Id.view_pager);
-			viewPager.Adapter = new FruitPagerViewFragmentsAdapter(this);
+			viewPager.Adapter = new VeggiePagerViewFragmentAdapter(this);
 			viewPager.CurrentItem = GetCurrentPosition();
 
 			//var tabLayout = FindViewById<TabLayout>(Resource.Id.tab_layout);
@@ -52,10 +52,10 @@ namespace FruitsAndVeggies.Droid.Views
 		{
 			int position = 0;
 
-			List<string> fruitIds = ViewModel.FruitIds.Split(',').ToList();
-			foreach (var id in fruitIds)
+            List<string> veggieIds = ViewModel.VeggieIds.Split(',').ToList();
+			foreach (var id in veggieIds)
 			{
-				if (id == ViewModel.FruitId)
+                if (id == ViewModel.VeggieId)
 				{
 					return position;
 				}

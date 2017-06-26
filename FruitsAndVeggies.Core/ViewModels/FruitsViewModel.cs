@@ -55,7 +55,7 @@ namespace FruitsAndVeggies.Core.ViewModels
 					parameters.fruitIds = parameters.fruitIds.Remove(0, 1);
 					parameters.fruitsCount = Fruits.Count.ToString();
 					parameters.fruitId = item.Name;
-					//ShowViewModel<FruitPagerViewModel>(parameters);
+					ShowViewModel<FruitPagerViewModel>(parameters);
 				});
 			}
 		}

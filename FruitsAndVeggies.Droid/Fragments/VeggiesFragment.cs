@@ -7,6 +7,8 @@ using FruitsAndVeggies.Core.ViewModels;
 using MvvmCross.Binding.Droid.Views;
 using Java.Lang;
 using MvvmCross.Platform.IoC;
+using Android.Support.V7.Widget;
+using Android.Support.V7.App;
 
 namespace FruitsAndVeggies.Droid.Fragments
 {

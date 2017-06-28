@@ -7,10 +7,7 @@ using MvvmCross.Droid.Support.V4;
 using FruitsAndVeggies.Core.ViewModels;
 using FruitsAndVeggies.Droid.Fragments;
 using FruitsAndVeggies.Droid.Views;
-using System.Linq;
-using System;
 using System.Collections.ObjectModel;
-using System.Collections.Generic;
 
 namespace FruitsAndVeggies.Droid.Adapters
 {

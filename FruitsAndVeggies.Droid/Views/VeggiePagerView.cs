@@ -36,8 +36,11 @@ namespace FruitsAndVeggies.Droid.Views
 			base.OnViewModelSet();
 
 			// Get toolbar and set title.
-			//var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
-			//toolbar.Title = Title;
+			var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            SetSupportActionBar(toolbar);
+			SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+			SupportActionBar.SetHomeButtonEnabled(true);
+			toolbar.Title = "Veggies";
 
 			// Configure tab layout.
 			var viewPager = FindViewById<ViewPager>(Resource.Id.view_pager);

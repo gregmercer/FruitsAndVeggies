@@ -7,10 +7,7 @@ using MvvmCross.Droid.Support.V4;
 using FruitsAndVeggies.Core.ViewModels;
 using FruitsAndVeggies.Droid.Fragments;
 using FruitsAndVeggies.Droid.Views;
-using System.Linq;
-using System;
 using System.Collections.ObjectModel;
-using System.Collections.Generic;
 
 namespace FruitsAndVeggies.Droid.Adapters
 {
@@ -28,23 +25,23 @@ namespace FruitsAndVeggies.Droid.Adapters
 			View = veggiePagerView;
 			ViewModel = veggiePagerView.ViewModel;
 
-			List<string> fruitIds = ViewModel.VeggieIds.Split(',').ToList();
+			List<string> veggieIds = ViewModel.VeggieIds.Split(',').ToList();
 			_fragmentInfos = new FragmentInfo[Convert.ToInt32(ViewModel.VeggiesCount)];
 			int index = 0;
-			foreach (var id in fruitIds)
+			foreach (var id in veggieIds)
 			{
-				var fruitFragment = new FruitFragment();
+                var veggieFragment = new VeggieFragment();
 
-				var fruitViewModel = new FruitViewModel();
-				fruitViewModel.Name = id;
-				fruitViewModel.Init(fruitViewModel);
+                var veggieViewModel = new VeggieViewModel();
+				veggieViewModel.Name = id;
+				veggieViewModel.Init(veggieViewModel);
 
-				fruitFragment.ViewModel = fruitViewModel;
+				veggieFragment.ViewModel = veggieViewModel;
 
 				_fragmentInfos[index] = new FragmentInfo(
 					$"Room {id}",
-					fruitFragment,
-					fruitViewModel
+					veggieFragment,
+					veggieViewModel
 				);
 				index++;
 			}

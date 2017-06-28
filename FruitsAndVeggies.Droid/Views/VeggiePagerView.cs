@@ -28,18 +28,6 @@ namespace FruitsAndVeggies.Droid.Views
 			base.OnCreate(savedInstanceState);
 		}
 
-		public override bool OnOptionsItemSelected(IMenuItem item)
-		{
-			switch (item.ItemId)
-			{
-				case Android.Resource.Id.Home:
-                    ViewModel.GoBackCommand.Execute(null);
-					return true;
-				default:
-					return base.OnOptionsItemSelected(item);
-			}
-		}
-
 		protected override void OnViewModelSet()
 		{
 			Title = "Veggie Detail";
@@ -84,6 +72,18 @@ namespace FruitsAndVeggies.Droid.Views
 		{
 			ViewModel.OnResume();
 			base.OnResume();
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+				case Android.Resource.Id.Home:
+					ViewModel.GoBackCommand.Execute(null);
+					return true;
+				default:
+					return base.OnOptionsItemSelected(item);
+			}
 		}
 
 		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

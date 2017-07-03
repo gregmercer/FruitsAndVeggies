@@ -7,22 +7,21 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
-namespace FruitsAndVeggies.iOS.Tabs
+namespace FruitsAndVeggies.iOS.Cells
 {
-    [Register ("FruitsTabView")]
-    partial class FruitsTabView
+    [Register ("FruitsTableViewCell")]
+    partial class FruitsTableViewCell
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView TableView { get; set; }
+        UIKit.UILabel Name { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (TableView != null) {
-                TableView.Dispose ();
-                TableView = null;
+            if (Name != null) {
+                Name.Dispose ();
+                Name = null;
             }
         }
     }

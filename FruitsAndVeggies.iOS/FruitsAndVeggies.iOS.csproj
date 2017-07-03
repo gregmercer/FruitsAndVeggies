@@ -136,12 +136,22 @@
     <Compile Include="Tabs\VeggiesTabView.designer.cs">
       <DependentUpon>VeggiesTabView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cells\FruitsTableViewCell.cs" />
+    <Compile Include="Cells\FruitsTableViewCell.designer.cs">
+      <DependentUpon>FruitsTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\VeggiesTableViewCell.cs" />
+    <Compile Include="Cells\VeggiesTableViewCell.designer.cs">
+      <DependentUpon>VeggiesTableViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="Tabs\FruitsTabView.xib" />
     <InterfaceDefinition Include="Tabs\VeggiesTabView.xib" />
+    <InterfaceDefinition Include="Cells\FruitsTableViewCell.xib" />
+    <InterfaceDefinition Include="Cells\VeggiesTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -171,6 +181,7 @@
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Tabs\" />
+    <Folder Include="Cells\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -23,7 +23,7 @@ namespace FruitsAndVeggies.iOS.Views
 		public override void ViewWillAppear(bool animated)
 		{
 			// Hide the navigation bar.
-			this.HideNavigationBar();
+			//this.HideNavigationBar();
 			ViewModel.OnResume();
 			ViewDidAppear(animated);
 		}

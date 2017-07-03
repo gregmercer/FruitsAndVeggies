@@ -14,8 +14,16 @@ namespace FruitsAndVeggies.iOS.Tabs
     [Register ("VeggiesTabView")]
     partial class VeggiesTabView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView TableView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (TableView != null) {
+                TableView.Dispose ();
+                TableView = null;
+            }
         }
     }
 }

@@ -156,6 +156,18 @@
     <Compile Include="Views\FruitPagerViewController.designer.cs">
       <DependentUpon>FruitPagerViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\VeggiePagerViewController.cs" />
+    <Compile Include="Views\VeggiePagerViewController.designer.cs">
+      <DependentUpon>VeggiePagerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VeggiePagerView.cs" />
+    <Compile Include="Views\VeggiePagerView.designer.cs">
+      <DependentUpon>VeggiePagerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VeggieView.cs" />
+    <Compile Include="Views\VeggieView.designer.cs">
+      <DependentUpon>VeggieView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
@@ -167,6 +179,9 @@
     <InterfaceDefinition Include="Views\FruitPagerView.xib" />
     <InterfaceDefinition Include="Views\FruitView.xib" />
     <InterfaceDefinition Include="Views\FruitPagerViewController.xib" />
+    <InterfaceDefinition Include="Views\VeggiePagerViewController.xib" />
+    <InterfaceDefinition Include="Views\VeggiePagerView.xib" />
+    <InterfaceDefinition Include="Views\VeggieView.xib" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

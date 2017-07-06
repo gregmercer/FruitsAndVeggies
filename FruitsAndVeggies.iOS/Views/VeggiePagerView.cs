@@ -25,38 +25,39 @@ namespace FruitsAndVeggies.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+			List<string> veggieIds = ViewModel.VeggieIds.Split(',').ToList();
+
+			List<IVeggiePages> pages = new List<IVeggiePages>();
+
+			int index = 0;
+			foreach (var id in veggieIds)
+			{
+				var viewController = Activator.CreateInstance(typeof(VeggieView)) as VeggieView;
+
+				var veggieViewModel = new VeggieViewModel();
+				veggieViewModel.Name = id;
+				veggieViewModel.Init(veggieViewModel);
+
+				viewController.Title = $"Veggie {id}";
+				viewController.ViewModel = veggieViewModel;
+
+				pages.Add(viewController);
+				index++;
+			}
+
+			View = new UIView();
+
+			_pageViewController = new VeggiePagerViewController(
+				new VeggiePagerViewDataSource(pages),
+				GetCurrentPosition()
+			);
+
+			View.Add(_pageViewController.View);
         }
 
         public override void ViewWillAppear(bool animated)
         {
-            List<string> veggieIds = ViewModel.VeggieIds.Split(',').ToList();
-
-            List<IVeggiePages> pages = new List<IVeggiePages>();
-
-            int index = 0;
-            foreach (var id in veggieIds)
-            {
-                var viewController = Activator.CreateInstance(typeof(VeggieView)) as VeggieView;
-
-                var veggieViewModel = new VeggieViewModel();
-                veggieViewModel.Name = id;
-                veggieViewModel.Init(veggieViewModel);
-
-                viewController.Title = $"Veggie {id}";
-                viewController.ViewModel = veggieViewModel;
-
-                pages.Add(viewController);
-                index++;
-            }
-
-            View = new UIView();
-
-            _pageViewController = new VeggiePagerViewController(
-                new VeggiePagerViewDataSource(pages),
-                GetCurrentPosition()
-            );
-
-            View.Add(_pageViewController.View);
         }
 
         public override void DidReceiveMemoryWarning()
